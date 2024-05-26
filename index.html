@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet", href="style.css">
+    <title>Orange Clicker</title>
+
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    
+</head>
+<body>
+    <script>
+        let tg = window.Telegram.WebApp;
+
+    </script>
+    <div class="centralize">
+        <p class="title_text"><b>Orange Game</b></p>
+        <button id="button_main", onclick="myFunction()", class="button_main", type="button"></button>
+        
+        <p class="score_text", id="score"><b>0</b></p>
+    </div>
+
+    <button type="button", onclick="exitFromApp()", class="button_exit"></button>
+    
+    <script>
+        var score = 0;
+        function myFunction(){
+            score = score + 1;
+            document.getElementById("score").innerHTML = score.toString();
+            tg.sendData(JSON.stringify(score));
+
+        }
+
+    </script>
+    
+
+</body>
+</html>
