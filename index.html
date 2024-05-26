@@ -28,8 +28,12 @@
         function myFunction(){
             score = score + 1;
             document.getElementById("score").innerHTML = score.toString();
-            tg.sendData(JSON.stringify(score));
 
+        }
+
+        function exitFromApp(){
+            tg.sendData(JSON.stringify(score));
+            tg.close()
         }
 
     </script>
