@@ -28,12 +28,12 @@
         function myFunction(){
             score = score + 1;
             document.getElementById("score").innerHTML = score.toString();
-
         }
 
         function exitFromApp(){
             tg.sendData(JSON.stringify(score));
-            tg.close()
+            tg.close();
+            console.log("data sent to telegram web app");
         }
 
     </script>
